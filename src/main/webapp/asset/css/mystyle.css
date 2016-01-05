@@ -1,0 +1,421 @@
+.headervalue
+{
+    border: medium none;
+    display: block;
+    margin: 25px 2% 15px;
+    padding: 0 0 3px;
+    position: relative;
+    white-space: normal;
+    width: 100%;
+    word-wrap: break-word;
+
+    color: #000000;
+    font-size: medium;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+
+
+}
+.clearfix::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.text-input-group .text-input-container {
+    margin: 0 0 7px;
+}
+.clearfix {
+    display: block;
+}
+.clearfix {
+    display: inline-block;
+}
+
+
+.full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+}
+.partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+}
+table.bs-example
+{
+    margin-top: 25px;
+    margin-bottom: 35px !important;
+    margin-left: -9px;
+}
+table.bs-examplenode5
+{
+    margin-bottom: 35px !important;
+    margin-top: 25px;
+    width: 100%;
+    margin-left: 12px;
+}
+.onclickrate
+{
+    color: red;
+    background-color: green;
+}
+.mousehover {
+    background-color: #BDBDBD;
+}
+.highlight
+{
+    background-color: #BDBDBD;
+}
+
+.bluebarrating {
+
+    background-color: #026ab3 !important;
+    color: #fff !important;
+}
+.bluebarrating:hover
+{
+
+    background-color: #026ab3;
+    color: #fff !important;
+}
+.barstyle
+{
+    padding: 4px;
+    border: 1px solid #EBE8E2;
+    border-collapse: separate;
+    text-align: center;
+    color: #333333;
+    height: 24px;
+    font-family: ProximaNova-Semibold;
+    /*
+    float: left;
+    */
+    line-height: 1;
+    background-color: #ffffff;
+
+}
+.barstylecostin
+{
+    background-color: #ffffff;
+    border: 1px solid #ebe8e2;
+    border-collapse: separate;
+    color: #333333;
+    float: left;
+    height: 24px;
+    line-height: 1;
+    margin-right: 3%;
+    padding: 4px;
+    text-align: center;
+    width: 64px;
+    font-family: ProximaNova-Semibold;
+    font-size: 15px;
+
+}
+.barstylenode5
+{
+    padding: 4px;
+    border: 1px solid #EBE8E2;
+    font-family: ProximaNova-Semibold;
+    border-collapse: separate;
+    text-align: center;
+    line-height: 1.429;
+    height: 24px;
+    float: left; line-height: 1;
+    background-color: #ffffff;
+    color: #333333;
+}
+.redclass
+{
+    background-color: #d6d6d6;
+
+}
+
+/*
+tr:first-child td:first-child { border-top-left-radius: 10px; }
+tr:first-child td:last-child { border-top-right-radius: 10px; }
+tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+*/
+
+tr:first-child td:last-child
+{
+    margin-right:0px;
+}
+
+td.barstyle:last-child {
+
+
+}
+
+
+.txtcntnt{
+
+}
+.hearticon
+{
+    color:  	#FF0000 ;
+}
+p.conctfrmt {
+    font-family:ProximaNova-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+.arrowupdown
+{
+	position:relative;
+    background-color: white;
+	background-image:url('../../images/arrow_dropdown.png');
+    background-position: 95% center;
+    background-repeat: no-repeat;
+    border: 1px solid #989898;
+    border-radius: 2px;
+    font-family: Calibri,Arial,sans-serif;
+    font-size: 17px;
+}
+
+
+/*Checkbox Addition */
+
+
+input[type=checkbox].css-checkbox {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:30px;
+    height:25px;
+    display:inline-block;
+    line-height:25px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+
+    vertical-align:middle;
+    cursor:pointer;
+    margin-right: 20%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -25px;
+}
+label.css-label {
+    background-image:url("../../images/checkbox-teal2.png");
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+input[type=checkbox].css-checkbox + label.css-label2 {
+    padding-left:30px;
+    height:25px;
+    display:inline-block;
+    line-height:25px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    margin-right: 20%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label2 {
+    background-position: 0 -25px;
+}
+label.css-label2 {
+    background-image:url("asset/images/checkbox-box.png");
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=radio].css-checkbox {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=radio].css-checkbox + label.css-label-radio {
+    padding-left:26px;
+    height:21px;
+    display:inline-block;
+    line-height:21px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+
+    vertical-align:middle;
+    cursor:pointer;
+
+}
+
+input[type=radio].css-checkbox:checked + label.css-label-radio {
+    background-position: 0 -21px;
+}
+label.css-label-radio {
+    background-image:url("../../images/radibuttonimg.png");
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+table.radiobuttonstyling td
+{
+    padding: 0px 15px 3px 5px;
+}
+
+
+/*Radio buittons */
+
+.progress {
+    position: relative;
+    animation: 2s linear 0s normal none infinite running progress-bar-stripes;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+    font-weight: bolder;
+}
+.headerpane
+{
+    color: #000000;
+    font-family: proximanova-semibold;
+    font-size: 22px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.dropdownstyle {
+    width: 200px;
+    border: 1px solid #ebe8ec;
+    margin-bottom: 30px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    color: #000;
+}
+.textareastyle
+{
+    border: 1px solid #b3b3b3 ;width: 75%;background-color: #fff;color: #000; margin-bottom: 4%;margin-top: 2%;
+}
+
+.surveybutton
+{
+
+    margin-top: 8%;
+    text-align: center;
+}
+.controlpers {
+
+    margin: 10% !important;
+
+}
+
+.control-label
+{
+    margin: 5% !important;
+}
+.textfeildname
+{
+    background-color: #fff !important;
+    color:#333333 !important;
+    border: 1px solid #DADADA !important;
+}
+#circle hr
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #fff;
+    border-image: none;
+    border-style: dotted ;
+    border-width: 2px 0;
+    bottom: 55px;
+    color: red;
+    content: "----";
+}
+#circle li {
+    list-style:none;
+    display: inline-block;
+    background: #E9E8E8;
+    border-radius: 100%;
+    margin: 0 5px;
+    text-align: center;
+    padding: 1px;
+    box-sizing: border-box;
+    color:#333333;
+    font-family: ProximaNova-Semibold;
+
+}
+ul#circle {
+    text-align: center;
+}
+#circle li.active{
+    background-color: red;
+    color:white;
+}
+
+#circle li.completed{
+    background-color: #0072bb;
+    color:white;
+}
+.btn .caret {
+    margin-left: 0;
+}
+.caret {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px dashed;
+    display: inline-block;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    width: 0;
+}
+.btnnext
+{
+    width: 150px;
+    height: 4.5em;
+}
+
+em {
+    color: red;
+    font-style: normal;
+    font-size: 16px;
+}
+select::-ms-expand{
+    display:none;
+}
+.formclass
+{
+    background-color: #f9f9f9; color:#9A9A9A;
+}
+.haserror
+{
+    margin: auto;
+    padding: 10px;
+    color:red;
+}

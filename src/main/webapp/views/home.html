@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>HeartKid R2R</title>
+    <link rel="stylesheet" href="asset/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="asset/css/style.css"> <!-- Resource style -->
+    <script src="../asset/js/modernizr.js"></script>
+    <link rel="stylesheet" href="asset/css/main.css" />
+    <script src="asset/js/angular1.2.2.js"></script>
+    <script src="asset/js/angular-ui-router.min.js"></script>
+    <script src="asset/js/jquery-2.1.1.js"></script>
+    <script src="asset/js/main.js"></script> <!-- Resource jQuery -->
+    <script src="../app.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .fit { /* set relative picture size */
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .center {
+            display: block;
+            margin: auto;
+        }
+        #container{ position:relative;}
+
+        #container imglogo{
+            /* Set rules to fill background */
+            /* min-height: 100%;
+             min-width: 1920px;
+             /* Set up proportionate scaling */
+            /* width: 100%;
+             height: auto;
+             /* Set up positioning */
+            /*position: fixed;*/
+            background-color: white;
+            color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            pointer-events: none; /* <-- this line is added */
+
+        }
+
+    </style>
+    <!-- <script type="text/javascript" language="JavaScript">
+         function set_body_height() { // set body height = window height
+             $('body').height($(window).height());
+         }
+         $(document).ready(function() {
+             $(window).bind('resize', set_body_height);
+             set_body_height();
+         });
+     </script>-->
+</head>
+
+<body class="landing" ng-app="formApp">
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+    <section class="cd-hero">
+        <ul class="cd-hero-slider autoplay">
+            <li class="selected">
+                <div class="cd-full-width">
+                    <p>Most people now</p>
+                    <h2>Survive Surgery</h2>
+                    <p>live many years</p>
+                    <a href="#survey-block" class="cd-btn secondary">Learn More</a>
+                </div> <!-- .cd-full-width -->
+            </li>
+
+            <li>
+                <div class="cd-full-width">
+                    <p>Surgical techniques have allowed</p>
+                    <h2>for improved survival</h2>
+                    <p>for most CHD patients</p>
+                </div> <!-- .cd-full-width -->
+            </li>
+
+            <li>
+                <div class="cd-full-width">
+                    <p>HELP US HELP YOU</p>
+                    <h2> WE WANT TO FIND YOU</h2>
+                    <p>MAKE YOUR VOICE COUNT</p>
+
+                </div> <!-- .cd-full-width -->
+
+            </li>
+
+            <li>
+                <div class="cd-full-width">
+                    <p>Most people now</p>
+                    <h2>Survive Surgery</h2>
+                    <p>live many years</p>
+                    <a href="#survey-block" class="cd-btn secondary">Learn More</a>
+                </div> <!-- .cd-full-width -->
+            </li>
+
+            <li>
+                <div class="cd-full-width">
+                    <p>Most people now</p>
+                    <h2>Survive Surgery</h2>
+                    <p>live many years</p>
+                    <a href="#survey-block" class="cd-btn secondary">Learn More</a>
+                </div> <!-- .cd-full-width -->
+            </li>
+        </ul> <!-- .cd-hero-slider -->
+
+        <div class="cd-slider-nav">
+            <nav>
+                <span class="cd-marker item-1"></span>
+
+                <ul>
+                    <li class="selected"><a href="#0">Intro</a></li>
+                    <li><a href="#0">Maddison</a></li>
+                    <li><a href="#0">Tina</a></li>
+                    <li><a href="#0">Matt</a></li>
+                    <li><a href="#0">Sara</a></li>
+                </ul>
+            </nav>
+        </div> <!-- .cd-slider-nav -->
+    </section> <!-- .cd-hero -->
+    <!-- Banner --
+        <section id="banner">
+            <div class="inner">
+            <p>Most people now</p>
+            <h2>SURVIVE SURGERY</h2>
+              <p>for many years</p>
+                <!--<ul class="actions">
+                    <li><a href="#" class="button special">Activate</a></li>
+                </ul>
+            </div>
+        </section>
+
+
+
+    <!-- Two -->
+    <section id="two" class="wrapper alt style2">
+        <section class="spotlight">
+            <div class="image">
+                <h2>WHAT WE DO</h2>
+                <p>Australian CHD Research Consortium brings you "Register to be Registered" For the first time ever there are now more adults than Children living with a congenital heart condition. The fantastic success in surgery of the last two decades give us hope and we need to understand more about you now more than ever before! <a href="#" style="color:#0072bb; text-decoration:none;">More...</a></p>
+            </div>
+            <div class="content">
+                <h2>HOW YOU CAN HELP</h2>
+                <p>Improved surgical techniques have allowed fantastic survival and Quality of Life for most CHD patients. Therefore, we are now finding MORE ADULTS living with CHD that ever in history. The NEEDS OF ALL PATIETNTS with CHD are important and this program is designed to understand your needs better. <a href="#" style="color:#0072bb; text-decoration:none;">More...</a></p>
+            </div>
+        </section>
+    </section>
+
+    <!-- Three -->
+    <section id="three" class="wrapper style3 special">
+        <div class="inner">
+
+            <ul class="features"><h2>Please Select Who you Are?</h2>
+
+                <li class="">
+                    <h3>PATIENT</h3>
+                    <div class="survey"><img class="fit" src="images/Patient.png"></div>
+                    <div style="width:65%; float:left; padding-left:5%; text-align:left; margin-bottom:5em;">Are you a HeartKid?<br>
+                        (An child or adult with a congential heart condition)</div>
+
+                    <a ui-sref="form.profile" class="button special">Proceed to survey&nbsp;&nbsp;></a>
+                </li>
+                <li class="">
+                    <h3>CARER</h3>
+                    <div class="survey"><img class="fit" src="images/Carer.png"></div>
+                    <div style="width:65%; float:left; padding-left:5%; text-align:left; margin-bottom:5em;">Are you Carer?<br>
+                        (An adult who cares a child or adult with a congential condition)</div>
+                    <a ui-sref="form.treatment" class="button special">Proceed to survey&nbsp;&nbsp;></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <div ng-include="'footer.html'"></div>
+</div>
+
+<!-- Scripts -->
+<!--<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<!--<script src="assets/js/main.js"></script>-->
+
+</body>
+</html>

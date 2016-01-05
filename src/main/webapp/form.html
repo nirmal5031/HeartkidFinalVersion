@@ -1,0 +1,30 @@
+
+<div id="form-container">
+<div ng-include="'header.html'"></div>
+    <form id="signup-form" name="userForm" class="formclass" novalidate >
+        <br><br>
+        <ul id="circle" ng-init="profile='true'">
+            <li ng-class="{'active': profile, 'completed': treatment}">1<hr></li>
+            <li  ng-class="{'active': treatment, 'completed': burden1 }">2<hr></li>
+            <li  ng-class="{'active': burden1, 'completed': burden2 }">3<hr></li>
+            <li  ng-class="{'active': burden2, 'completed': burden3 }">4<hr></li>
+            <li  ng-class="{'active': burden3, 'completed': burden4 }">5<hr></li>
+            <li  ng-class="{'active': burden4, 'completed': thankyou }">6<hr></li>
+            <li ng-class="{'active': thankyou}">7</li>
+        </ul>
+        <!-- our nested state views will be injected here -->
+        <div id="form-views"  ui-view></div>
+        <br><br>
+    </form>
+<div ng-include="'footer.html'" style="margin-top: -3%;"></div>
+</div>
+
+<style>
+
+
+
+
+
+
+
+</style>

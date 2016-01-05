@@ -1,0 +1,172 @@
+<div class="col-lg-12" style="width: 85%" ng-controller="burdendiseaseController">
+
+                <div class="headerpane">Productivity</div>
+                <div class="control" ng-hide="formData.curntwork=='yes'">
+                    <label class=" col-sm-2" style="width: 100%;">Do you currently work? <em>*</em></label>
+                  <!--  <select  name="curntwork" ng-model="formData.curntwork" ng-change="curentlywork()" class="textfeildname yellow arrowupdown"  style="width:15%;" ng-options="curntwork for curntwork in yesnoArray" required>
+                        <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
+
+                    </select>-->
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.curntwork" name="curntwork" id="radio61" class="" value="yes" required/>  <label for="radio61" onclick>Yes</label></td><td><input type="radio" ng-model="formData.curntwork" name="curntwork" id="radio91" class=""  value="no" required/><label for="radio91" class="">No</label></td></tr></table>
+
+                </div>
+                <div class="control"  ng-show="formData.curntwork=='yes'">
+                    <table class="radio-btn" style="width: 40%;"><tr><td style=""><input type="radio" ng-model="formData.worktime" name="worktime" id="worktime" class="" value="yes" required/>  <label for="worktime" onclick>Full Time</label></td><td><input type="radio" ng-model="formData.worktime" name="worktime" id="parttime" class=""  value="no" required/><label for="parttime" class="">Part Time</label></td></tr></table>
+
+
+                </div>
+                <div class="control">
+                    <label class=" col-sm-2" style="width: 100%;">Do you currently receive disability benefits? </label>
+                  <!--  <select  name="disabilityben" ng-model="formData.disabilityben"  class="textfeildname yellow arrowupdown"  style="width:15%; " ng-options="disabilityben for disabilityben in yesnoArray" >
+                        <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
+
+                    </select>-->
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.disabilityben" name="disabilityben" id="disabilityben" class="" value="yes" required/>  <label for="disabilityben" onclick>Yes</label></td><td><input type="radio" ng-model="formData.disabilityben" name="disabilityben" id="disabilityno" class=""  value="no" required/><label for="disabilityno" class="">No</label></td></tr></table>
+
+                </div>
+                <div class="control">
+                    <label class=" col-sm-2" style="width: 100%;">Do you feel that living with your heart condition has impacted your career?  </label>
+
+                    <table class="table bs-example" style="padding: 4px;">
+
+                        <tbody>
+                        <tr style=" padding: 4px; " >
+                            <td style="" class="col-md-1 barstyle {{myClass}}" ng-repeat="node in nodes"
+                                ng-click="chdlivingimpact(node.id)"
+                                ng-model="formData.chdlivingimpc" ng-class="getchdimpaClass(node.id)"   ng-mouseenter="myClass='redclass'"
+                                ng-mouseleave="myClass = ''">
+                                {{node.rate}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="control">
+                    <label class=" col-sm-2" style="width: 100%;"> Have you have to make changes in your work due to your CHD diagnosis (you / your child)? </label>
+                   <!-- <select  name="changeimpactchd" ng-model="formData.changeimpactchd"  class="textfeildname yellow arrowupdown"  style="width:15%; " ng-options="changeimpactchd for changeimpactchd in yesnoArray" >
+                        <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
+
+                    </select>-->
+                    <table class="table bs-examplenode5" style="padding: 4px;">
+
+                        <tbody>
+                        <tr style=" padding: 4px; " >
+                            <td style="" class="col-md-1 barstylenode5 {{myClass}}" ng-repeat="node in nodes1to5"
+                                ng-click="changeinwork(node.id)"
+                                ng-model="formData.changeimpactchd" ng-class="changeinworkClass(node.id)"   ng-mouseenter="myClass='redclass'"
+                                ng-mouseleave="myClass = ''">
+                                {{node.rate}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="control">
+                    <label class=" col-sm-2" style="width: 100%;">How do you feel this has impacted in your ability to work / career development / progression? </label>
+
+
+                    <table class="table bs-examplenode5" style="padding: 4px;">
+
+                        <tbody>
+                        <tr style=" padding: 4px; " >
+                            <td name="chdimpactwork" style="" class="col-md-1 barstylenode5 {{myClass}}" ng-repeat="node in nodes1to5"
+                                ng-click="chdimpactwork(node.id)"
+                                ng-model="formData.chdimpactwork" ng-class="chdimpactworkClass(node.id)"   ng-mouseenter="myClass='redclass'"
+                                ng-mouseleave="myClass = ''">
+                                {{node.rate}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="control">
+                    <label class=" col-sm-2" data-toggle="tooltip" title="Hooray!" style="width: 100%;">How many days missed of work / school last year due to symptoms relating to your heart condition? <em>*</em></label>
+
+                    <table class="table bs-example" style="padding: 4px;">
+
+                        <tbody>
+                        <tr style=" padding: 4px; " >
+                            <td  style="" class="col-md-1 barstyle {{myClass}}" ng-repeat="node in nodes"
+                                ng-click="missschooldays(node.id)"
+                                ng-model="formData.missschooldays" ng-class="missschooldaysClass(node.id)"   ng-mouseenter="myClass='redclass'"
+                                ng-mouseleave="myClass = ''" required>
+                                {{node.rate}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <span ng-show="userForm.missedschool.$dirty && userForm.missedschool.$error.required" class="help-block" style="margin: auto;width: 55%;padding: 10px;">This field is mandatory</span>
+
+                </div>
+                <div class="control">
+                    <label class=" col-sm-2" style="width: 100%;">As a carer, how many days have you had to take off work caring for your loved one with CHD in last 12 months ? </label>
+                   <!-- <select  name="carermisseddays" ng-model="formData.carermisseddays"  class="textfeildname yellow arrowupdown dropdownstyle"  style=" " ng-options="carermisseddays for carermisseddays in scale1to10" >
+                        <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
+
+                    </select>-->
+                    <table class="table bs-example" style="padding: 4px;">
+
+                        <tbody>
+                        <tr style=" padding: 4px; " >
+                            <td style="" class="col-md-1 barstyle {{myClass}}" ng-repeat="node in nodes"
+                                ng-click="carermisseddays(node.id)"
+                                ng-model="formData.miscarerchooldays" ng-class="carermisseddaysClass(node.id)"   ng-mouseenter="myClass='redclass'"
+                                ng-mouseleave="myClass = ''" required>
+                                {{node.rate}}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="headerpane">Educational challenges</div>
+
+                <div class="control">
+                    <label class=" col-sm-2"  style="width: 100%;">Have you / the person you care for experienced educational challenges? </label>
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.eductnchallng" name="eductnchallng" id="eductnchallng" class="" value="yes" required/>  <label for="eductnchallng" onclick>Yes</label></td><td><input type="radio" ng-model="formData.eductnchallng" name="eductnchallng" id="eductnchallngno" class=""  value="no" required/><label for="eductnchallngno" class="">No</label></td></tr></table>
+                </div>
+
+                <div class="control" ng-show="formData.eductnchallng=='yes'">
+                    <label class=" col-sm-2"  style="width: 100%;">Has this meant falling behind in school grades ? </label>
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.schoolgrd" name="schoolgrd" id="radio6" class="" value="yes" required/>  <label for="radio6" onclick>Yes</label></td><td><input type="radio" ng-model="formData.schoolgrd" name="schoolgrd" id="radio39" class=""  value="no" required/><label for="radio39" class="">No</label></td></tr></table>
+                </div>
+                <div class="control" ng-show="formData.schoolgrd=='yes'">
+                    <label class=" col-sm-2"  style="width: 100%;">Has this been formally assessed?  </label>
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.formalassess" name="formalassess" id="radio16" class="" value="yes" required/>  <label for="radio16" onclick>Yes</label></td><td><input type="radio" ng-model="formData.formalassess" name="formalassess" id="radio9" class=""  value="no" required/><label for="radio9" class="">No</label></td></tr></table>
+                </div>
+                <div class="control">
+                    <label class=" col-sm-2" style="width: 100%;">Do you feel this has impacted you / your child’s / the person you care for in relation to your Quality of Life?  </label>
+                    <textarea type="textarea"  name ="impactQol"  class="textareastyle" style=""  ng-model="formData.impactQol"></textarea>
+
+                </div>
+
+                <div class="control">
+                    <label class=" col-sm-2"  style="width: 100%;">Has your heart condition affected you involvement level in school / work / community?  </label>
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.condimpactschl" name="condimpactschl" id="condimpactschl" class="" value="yes" required/>  <label for="condimpactschl" onclick>Yes</label></td><td><input type="radio" ng-model="formData.condimpactschl" name="condimpactschl" id="condimpactschlno" class=""  value="no" required/><label for="condimpactschlno" class="">No</label></td></tr></table>
+
+
+                </div>
+                <div class="control"  ng-show="formData.condimpactschl=='yes'">
+                    <label class=" col-sm-2" style="width: 100%;">Describe the impact? </label>
+                    <textarea type="textarea" placeholder="Describe the impact" name ="condimpactschooldesc"  class="textareastyle" style="width: 75%;"  ng-model="formData.condimpactschooldesc"></textarea>
+
+                </div>
+
+
+    <div class="btn-group surveybutton" style="">
+        <button  style="" ui-sref="form.burden-1" class="btnnext btn-primary">Previous</button>
+        <button  style="" ui-sref="form.burden-2" class="btnnext btn-default" ng-click="">Next</button>
+    </div>
+    <br><br>
+        </div>
+
+<script>
+    $(document).ready(function(){
+        alert("initialie tool tipo");
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+

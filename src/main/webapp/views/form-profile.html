@@ -1,0 +1,118 @@
+<div class="col-lg-12" style="width: 100%" ng-controller="personalInfoContrler">
+<section id="two" class=" alt " ng-controller="personalInfoContrler" style="background-color:#f9f9f9;"  window-exit>
+        <section class="spotlight">
+            <div class="image" style="width: 100%">
+                <div class="headerpane">Patient Details</div>
+
+                 <div class="controlpers">
+                    <label class=" col-sm-2">Title</label>
+
+                     <select  name="titleselect" ng-model="formData.title" class="textfeildname yellow arrowupdown text"  ng-options="title for title in titleArray">
+                         <option value="">--Select--</option> <!-- not selected / blank option -->
+                     </select>
+                </div>
+				<div class="controlpers">
+                    <label class=" col-sm-2">First Name <em>*</em></label>
+                    <input type="text" name="firstname" value="" ng-pattern="/^[a-zA-Z]*$/" ng-model="formData.firstname" class="textfeildname yellow" />
+                    </div>
+				<div class="controlpers">
+                    <label class=" col-sm-2">Last Name <em>*</em></label>
+                    <input type="text"  name="lastname" value=""   ng-model="formData.lastname" class="textfeildname yellow"/>
+                </div>
+				<div class="controlpers">
+                    <label class=" col-sm-2">Sex</label>
+                    <select  name="sexselect"  ng-model="formData.sex" class="textfeildname yellow arrowupdown text" ng-options="sex for sex in sexArray">
+                        <option value="">--Select--</option> <!-- not selected / blank option -->
+                    </select>
+                </div>
+				<div class="controlpers">
+                    <label class=" col-sm-2">age</label>
+                    <input type="text" name="firstname" value=""  ng-model="formData.age" class="textfeildname yellow" />
+
+                                  </div>
+				<div class="controlpers">
+                    <label class=" col-sm-21">Date of Birth<em>*</em></label>
+                    <input type="text" readonly="true" ng-model="formData.birthdate"  class="textfeildname yellow  text datepicker">
+                </div>
+			   <div class="controlpers">
+                    <label class=" col-sm-22 ">Country of birth</label>
+                    <select  name="lstofcountryArray"  ng-model="formData.countrybirth"  ng-options="country for country in lstofcountryArray"  class="textfeildname yellow arrowupdown text-carer" >
+                        <option value="">--Select--</option> <!-- not selected / blank option -->
+
+                    </select>
+            </div>
+			<div class="controlpers">
+                    <label class=" col-sm-22 ">Ethinicy</label>
+                    <select  name="lstofcountryArray" ng-model="formData.ethnicity"   ng-options="ethnicity for ethnicity in ethnicityArray" class="textfeildname yellow arrowupdown text-carer" >
+                        <option value="">--Select--</option> <!-- not selected / blank option -->
+
+                    </select>
+            </div>
+			<div class="controlpers">
+                    <label class=" col-sm-22 ">Language Spoken</label>
+                    <select  name="lstofcountryArray"  ng-model="formData.language" class="textfeildname yellow arrowupdown text-carer" ng-options="lang for lang in languageArray" >
+                        <option value="">--Select--</option> <!-- not selected / blank option -->
+
+                    </select>
+            </div>
+            </div>
+            <div class="content"  style="width: 100%">
+                <div class="headerpane">Contact Details</div>
+                               
+				<div class="control-label">
+                    <label class=" col-sm-22 ">Phone</label>
+                    <input type="text"  name="phone" value="" ng-model="formData.phone" class="textfeildname yellow text-carer">
+                </div>
+				<div class="control-label">
+                    <label class=" col-sm-22">eMail <em>*</em></label>
+                    <input type="email" name="firstname" value=""  ng-model="formData.email" class="textfeildname yellow text-carer" />
+				</div>
+				<div class="control-label">
+                    <label class=" col-sm-22 ">PostCode<em>*</em></label>
+                    <input type="text" name="postcode" maxlength="4" value="" ng-model="formData.postcode" id="postcde"  class="textfeildname text-carer"/>
+                </div>
+				<div class="control-label">
+                    <label class=" col-sm-22 ">State</label>
+                    <select  name="state" ng-model="formData.usertype" ng-model="formData.state" class="textfeildname yellow arrowupdown text-carer" ng-options="title for title in statelistArray">
+                        <option value="">--Select--</option> <!-- not selected / blank option -->
+                    </select>
+                </div>
+
+
+                </div>
+    </section>
+    </section>
+
+<div class="btn-group surveybutton" style="margin-top: 5%">
+    <button  style="" ui-sref="form.treatment" ng-disabled="userForm.$invalid" class="btn btn-default profilebutn" ng-click="">Next</button>
+</div>
+</div>
+
+
+<style>
+
+    .controlpers {
+        float: left;
+        margin: 20px 0 0 15px !important;
+        width: 95%;
+    }
+    .control-label{
+
+        float: left;
+        margin: 20px 0 0 15px !important;
+        width: 95%;
+    }
+</style>
+<script>
+    $( document ).ready(function() {
+        var $j = jQuery.noConflict();
+        var date = new Date();
+        var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
+        $(".datepicker").datepicker({
+            maxDate:new Date(y, m, d),
+            yearRange: '-90:+1M',
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+</script>
