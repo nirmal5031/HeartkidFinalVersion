@@ -290,6 +290,11 @@ header p {
     padding: 9px;
     border-radius: 3px;
 }
+
+.mobile-footer{
+	float:left !important;	
+	display:none;
+}
 /*
 	Spectral by HTML5 UP
 	html5up.net | @n33co
@@ -305,7 +310,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font-family:Arial,Helvetica,Verdana,sans-serif;
+	font-family: ProximaNova-Light;
     text-transform:none
 
 }
@@ -1746,7 +1751,6 @@ a {
     -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
     -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
     transition: color 0.2s ease, border-bottom-color 0.2s ease;
-    border-bottom: dotted 1px;
     color: inherit;
     text-decoration: none;
 }
@@ -2008,7 +2012,7 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-    box-shadow: 0 0 0 2px #21b2a6;
+    box-shadow: 0 0 0 1px #0072bb;
 }
 
 .select-wrapper {
@@ -2120,7 +2124,7 @@ input[type="radio"]:checked + label:before {
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-    box-shadow: 0 0 0 2px #21b2a6;
+   /* box-shadow: 0 0 0 2px #21b2a6;*/
 }
 
 input[type="checkbox"] + label:before {
@@ -2619,8 +2623,9 @@ button.special,
     color: #0072bb !important;
     box-shadow: none !important;
     border: 1px solid #0072bb;
-    font-size:10px;
+    font-size:14px;
     width: 100%;
+	padding:10px;
 
 }
 
@@ -2689,10 +2694,10 @@ button:disabled,
     width: 100%;
     margin:0;
 }
-.features h2{font-size: 1.7em;
+.features h2{
+	font-size: 1.5em;
     color: #333333;
     font-weight: bold;
-    letter-spacing: 0.225em;
     line-height: 1em;
     margin: 1em 0 0.5em;
     text-transform: uppercase;
@@ -2726,7 +2731,7 @@ button:disabled,
     font-size:1.25em;
     list-style: none;
     padding-bottom: 50px;
-    width: 100%;
+    width: 96%;
     margin:0;
 }
 .features_footer h2{font-size: 1.7em;
@@ -2741,17 +2746,20 @@ button:disabled,
     display: block;
     position: relative;
     width: 46%;
-    margin: 2em 1em 0em;
+    margin: 2em 0em;
     text-align:left;
 }
 .features_footer li p{
     text-align: right;}
 
 .left-footer-container{
-    padding-left: 5.5em;
+	padding-left:5%;
+   float:left;
 }
 .right-footer-container{
-    padding-right: 6.2em;
+	padding-right:5%;
+   float:right;
+   text-align:right;
 }
 .survey{
     /*background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../../images/Patient.png");
@@ -2885,7 +2893,14 @@ button:disabled,
     text-transform: none;
 }
 .spotlight p{
-    font-size:0.87em;
+    font-size:0.9em;
+}
+
+.spotlight ul{
+	margin-top:5%;
+   list-style:none;
+   font-size:1.22em;
+   width:96%;
 }
 
 .spotlight .image {
@@ -2956,6 +2971,37 @@ button:disabled,
     background-color: rgba(0, 0, 0, 0);
 }
 
+.sectionThree{
+	background-color: #f4f3f3;
+	padding-top:2em;
+	
+}
+.sectionThree .spotlight{
+	margin-top:0px !important;
+}
+.sectionThree .features h2{
+	margin:0;
+}
+.sectionThree  .spotlight{
+	padding-bottom:3em;
+}
+.sectionThree .image{
+	border:1px solid #e3e2e2;border-radius:0;margin-top:15px;
+}
+
+.sectionThree h2{
+	margin:5% 0 5% 37%;	
+}
+.imageContainer{
+width:35%;float:left;	
+	
+}
+.textContainer{
+	width:65%;float:left;padding:0% 5% 5% 2%; 
+}
+.textContainer p{
+	font-family: ProximaNova-Light;text-align:none;font-size:0.9em;
+}
 @media screen and (max-width: 1200px) {
 
     .spotlight .image {
@@ -3021,6 +3067,7 @@ button:disabled,
 
 .wrapper > .inner {
     width: 65em;
+	padding:5em;
     margin: 0 auto;
 }
 header .inner{margin-left:5em;
@@ -3208,7 +3255,6 @@ header .inner{margin-left:5em;
 }
 
 .wrapper.style3 {
-    background-color: #F4F3F3;
     color: #d3d4e4;
     width: 100%;
 }
@@ -4268,7 +4314,7 @@ body.is-mobile #main > header {
         padding-top:10em;
     }
     .twitt-logo
-    {float:right; padding-left:1.4em;}
+    {float:right; padding-left:1em;}
     .will-logo
     {float:right; padding-left:1em;}
 
@@ -4377,8 +4423,18 @@ body.is-mobile #main > header {
 @media screen and (max-width: 980px) {
 
     #footer {
-        padding: 4em 3em 2em 3em ;
+       padding:15px !important;
     }
+	.features_footer{
+		padding:0px !important;
+		margin:0px !important;
+ 	}
+	.mobile-footer{
+		display:block !important;
+	}
+	.right-footer-container{
+		display:none !important;
+	}
     .panel-title span
     {
         font-size: 17px;
@@ -4446,6 +4502,7 @@ body.is-mobile #main > header {
     #footer {
         padding: 3em 2em 1em 2em ;
     }
+	
     .panel-title span
     {
         font-size: 17px;
@@ -4562,3 +4619,5 @@ body.is-mobile.landing .wrapper.style4 {
 body.is-mobile.landing #footer {
     background-color: #1d242a;
 }
+
+

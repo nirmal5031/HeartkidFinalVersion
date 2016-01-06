@@ -17,7 +17,7 @@
 
             <div class="control" ng-show="formData.conditioncalld=='yes'">
                 <p class="conctfrmt">What congenital heart condition were you diagnosed with? <em>*</em></p>
-                <select  name="heartcondsselect" ng-model="formData.heartconds" class="textfeildname yellow arrowupdown dropdownstyle" ng-required="formData.conditioncalld=='yes'" style="width: 300px;" ng-options="heartconds for heartconds in heartcondsArray">
+                <select  name="heartcondsselect" ng-model="formData.heartconds" class="textfeildname yellow arrowupdown dropdownstyle" ng-required="formData.conditioncalld=='yes'" style="width: 250px;" ng-options="heartconds for heartconds in heartcondsArray">
                     <option value="">--Select--</option> <!-- not selected / blank option -->
                 </select>
 
@@ -34,7 +34,7 @@
 
             <div class="control" ng-show="formData.surgeryheld=='yes'">
                 <p class="conctfrmt">If you had surgery, was it delayed? <em>*</em></p>
-                <table class="radio-btn"><tr><td style=""><input type="radio" ng-required="formData.surgeryheld=='yes'" ng-model="formData.surgerydelay" name="surgerydelay" id="rc1" class="" value="yes" required/>  <label for="rc1" onclick>Yes</label></td><td><input type="radio" ng-model="formData.surgerydelay" name="surgerydelay" id="rc2" class=""  value="no" required/><label for="rc2" class="">No</label></td></tr></table>
+                <table class="radio-btn"><tr><td style=""><input type="radio" ng-required="formData.surgeryheld=='yes'" ng-model="formData.surgerydelay" name="surgerydelay" id="rc1" class="" value="yes"/>  <label for="rc1" onclick>Yes</label></td><td><input type="radio" ng-model="formData.surgerydelay" name="surgerydelay" id="rc2" class=""  value="no" ng-required="formData.surgeryheld=='yes'"/><label for="rc2" class="">No</label></td></tr></table>
 
             </div>
             <div class="control" ng-show="formData.surgerydelay=='yes'">
@@ -46,7 +46,7 @@
                             <td style="" class="col-md-1 barstyle {{myClass}}" ng-repeat="node in nodes"
                                 ng-click="Surgerydelaycount(node.id)"
                                 ng-model="formData.surgerydelaycount" ng-class="SurgerydelaycountClass(node.id)"   ng-mouseenter="myClass='redclass'"
-                                ng-mouseleave="myClass = ''" ng-required="formData.surgerydelay=='Yes'">
+                                ng-mouseleave="myClass = ''" ng-required="formData.surgerydelay=='yes'">
                                 {{node.rate}}
                             </td>
                         </tr>
@@ -55,9 +55,16 @@
                 </div>
 
             </div>
+
+
+    <div class="control" ng-show="formData.surgeryheld=='yes'">
+        <p class="conctfrmt">Did you have to travel > 50km for surgery? <em>*</em></p>
+        <table class="radio-btn"><tr><td style=""><input type="radio" ng-required="formData.surgeryheld=='yes'" ng-model="formData.trvlsurg" name="trvlsurg" id="trvlsurg" class="" value="yes"/>  <label for="trvlsurg" onclick>Yes</label></td><td><input type="radio" ng-model="formData.trvlsurg" name="trvlsurg" id="trvlsurg2" class=""  value="no" ng-required="formData.surgeryheld=='yes'"/><label for="trvlsurg2" class="">No</label></td></tr></table>
+
+    </div>
     <div class="btn-group surveybutton" style="">
         <button  style="" ui-sref="form.profile" class="btnnext btn-primary">Previous</button>
-        <button  style="" ui-sref="form.burden-1"  ng-click="" class="btnnext btn-default">Next</button>
+        <button  style="" ui-sref="form.burden-1"  ng-disabled="userForm.$invalid" ng-click="savesurveyregistration()" class="btnnext btn-default">Next</button>
     </div>
     <br><br>
 

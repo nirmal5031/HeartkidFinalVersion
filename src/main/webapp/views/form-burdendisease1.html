@@ -9,14 +9,11 @@
                     <div class="headerpane">Doctor Visits</div>
                 <div class="control">
                     <label class=" col-sm-2" style="width: 100%;">How many times have you seen your heart doctor (cardiologist) in the last 3 years ? <em>*</em></label>
-
-
-
                             <table class="table bs-example" >
 
                         <tbody>
                         <tr style=" padding: 4px; " >
-                            <td style="" class="col-md-1 barstyle {{myClass}}" ng-repeat="node in nodes" required
+                            <td style="" class="col-md-1 barstyle {{myClass}}" ng-repeat="node in nodes"
                                 ng-click="nodeclick(node.id)"
                                 ng-model="formData.heartdocvisit" ng-class="getClass(node.id)"   ng-mouseenter="myClass='redclass'"
                                 ng-mouseleave="myClass = ''" >
@@ -33,10 +30,10 @@
 
                         <tbody>
                         <tr style=" padding: 4px; " >
-                            <td style="" class="col-md-1 barstyle {{myClass}}" ng-repeat="node in nodes" required
+                            <td style="" class="col-md-1 barstyle {{myClass}}" ng-repeat="node in nodes"
                                 ng-click="localdoctor(node.id)"
                                 ng-model="formData.localdoctorvisit" ng-class="getLocalDoc(node.id)"   ng-mouseenter="myClass='redclass'"
-                                ng-mouseleave="myClass = ''" required >
+                                ng-mouseleave="myClass = ''"  >
                                 {{node.rate}}
                             </td>
                         </tr>
@@ -53,7 +50,7 @@
                             <td style="" class="col-md-1 barstylenode5 {{myClass}}" ng-repeat="node in nodes1to5"
                                 ng-click="emergdept(node.id)"
                                 ng-model="formData.emergdeptvisit" ng-class="getenerClass(node.id)"   ng-mouseenter="myClass='redclass'"
-                                ng-mouseleave="myClass = ''"  required>
+                                ng-mouseleave="myClass = ''"  >
                                 {{node.rate}}
                             </td>
                         </tr>
@@ -61,14 +58,12 @@
                     </table>
 
                 </div>
-                <div class="control">
+                <div class="control" >
                     <label class=" col-sm-2" style="width: 100%;">Are you / do you care for a person over the age of 16?<em>*</em></label>
                   <!--  <select  name="careage16" ng-model="formData.careage16" class="textfeildname yellow arrowupdown" ng-change="childtoadultdoc()"  style="width:25%;" ng-options="yesno for yesno in yesnoArray" required >
                         <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
                     </select>-->
-                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.careage16" name="careage16" id="radio61" class="" value="yes" required/>  <label for="radio61" onclick>Yes</label></td><td><input type="radio" ng-model="formData.careage16" name="careage16" id="radio91" class=""  value="no" required/><label for="radio91" class="">No</label></td></tr></table>
-
-                    <span ng-show="userForm.careage16.$dirty && userForm.careage16.$error.required" class="help-block" style="margin: auto;width: 55%;padding: 10px;">Do you care for a person over the age of 16 is mandatory</span>
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.careage16" name="careage16" id="radio61" class="" value="yes" />  <label for="radio61" onclick>Yes</label></td><td><input type="radio" ng-model="formData.careage16" name="careage16" id="radio91" class=""  value="no" /><label for="radio91" class="">No</label></td></tr></table>
 
                 </div>
 
@@ -78,7 +73,7 @@
                         <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
 
                     </select>-->
-                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.childtoadultdoc" name="childtoadultdoc" id="radio71" class="" value="yes" required/>  <label for="radio71" onclick>Yes</label></td><td><input type="radio" ng-model="formData.childtoadultdoc" name="childtoadultdoc" id="radio81" class=""  value="no" required/><label for="radio81" class="">No</label></td></tr></table>
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.childtoadultdoc" name="childtoadultdoc" id="radio71" class="" value="yes" />  <label for="radio71" onclick>Yes</label></td><td><input type="radio" ng-model="formData.childtoadultdoc" name="childtoadultdoc" id="radio81" class=""  value="no" /><label for="radio81" class="">No</label></td></tr></table>
 
                 </div>
                 <div class="headerpane">Mental Health Assesment</div>
@@ -90,7 +85,7 @@
                         <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
 
                     </select>-->
-                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-change="" ng-model="formData.anxietycond" name="anxietycond" id="radio72" class="" value="yes" required/>  <label for="radio72" onclick>Yes</label></td><td><input type="radio" ng-model="formData.anxietycond" name="anxietycond" id="radio82" class=""  value="no" required/><label for="radio82" class="">No</label></td></tr></table>
+                    <table class="radio-btn"><tr><td style=""><input type="radio" ng-change="" ng-model="formData.anxietycond" name="anxietycond" id="radio72" class="" value="yes" />  <label for="radio72" onclick>Yes</label></td><td><input type="radio" ng-model="formData.anxietycond" name="anxietycond" id="radio82" class=""  value="no" /><label for="radio82" class="">No</label></td></tr></table>
 
                 </div>
                 <div class="control"  ng-show="formData.anxietycond=='yes'">
@@ -100,7 +95,7 @@
                 </div>
     <div class="btn-group surveybutton" style="">
         <button  style="" ui-sref="form.treatment" class="btnnext btn-primary">Previous</button>
-        <button  style="" ui-sref="form.burden-add" class="btnnext btn-default" ng-click="">Next</button>
+        <button  style="" ui-sref="form.burden-add" class="btnnext btn-default" ng-disabled="userForm.$invalid" ng-click="savesurveyregistration()">Next</button>
     </div>
     <br><br>
                     </div>

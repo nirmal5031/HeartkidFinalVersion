@@ -3,10 +3,9 @@
 <head>
 
     <title>HeartKid R2R</title>
-    <link rel="stylesheet" href="asset/css/reset.css"> <!-- CSS reset -->
+ <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="asset/css/style.css"> <!-- Resource style -->
     <script src="../asset/js/modernizr.js"></script>
-    <link rel="stylesheet" href="asset/css/main.css" />
     <script src="asset/js/angular1.2.2.js"></script>
     <script src="asset/js/angular-ui-router.min.js"></script>
     <script src="asset/js/jquery-2.1.1.js"></script>
@@ -56,7 +55,17 @@
 </head>
 
 <body class="landing" ng-app="formApp">
+<header class="cd-header">
+		<div id="cd-logo"><a href="#0"><img src="images/heart_kidslogo1.png" alt="Logo" data-pin-nopin="true"></a></div>
 
+		<nav class="cd-primary-nav">
+			<ul>
+				<li><a href="http://www.heartkids.org.au">Home</a></li>
+				<li><a href="#0">Disclaimer</a></li>
+				<li><a href="#0">Contact Us</a></li>
+			</ul>
+		</nav> <!-- .cd-primary-nav -->
+	</header>
 <!-- Page Wrapper -->
 <div id="page-wrapper">
 
@@ -122,6 +131,42 @@
             </nav>
         </div> <!-- .cd-slider-nav -->
     </section> <!-- .cd-hero -->
+	<section class="wrapper alt style2">
+        <section class="spotlight">
+            <div class="image">
+                <h2>WHAT WE DO</h2>
+                <p>Australian CHD Research Consortium brings you "Register to be Registered" For the first time ever there are now more adults than Children living with a congenital heart condition. The fantastic success in surgery of the last two decades give us hope and we need to understand more about you now more than ever before! <a href="#" style="color:#0072bb; text-decoration:none;">More...</a></p>
+            </div>
+            <div class="image">
+                <h2>HOW YOU CAN HELP</h2>
+                <p>Improved surgical techniques have allowed fantastic survival and Quality of Life for most CHD patients. Therefore, we are now finding MORE ADULTS living with CHD that ever in history. The NEEDS OF ALL PATIETNTS with CHD are important and this program is designed to understand your needs better. <a href="#" style="color:#0072bb; text-decoration:none;">More...</a></p>
+            </div>
+        </section>
+    </section>
+	
+	
+	<section class="sectionThree ">
+		<section class="features"><h2>Please Select Who you Are?</h2></section>
+        <section class="spotlight">
+            <div class="image">
+                <h2>CARER</h2>
+				<div class="imageContainer"><img src="images/Carer.png" style='width:60%;'></div>
+				<div class="textContainer">
+					<p>Are you Carer?<br>(An adult who cares a child or adult with a congential condition)</p>
+					<div><a ui-sref="form.profile" class="button special" ng-click="proceedtosurvey('Carer')">Proceed to survey&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+				</div>					
+            </div>
+			<div class="image">
+                <h2>PATIENT</h2>
+				<div class="imageContainer"><img src="images/Patient.png" style='width:60%;'></div>
+				<div class="textContainer">
+					<p>Are you a HeartKid?<br>(An child or adult with a congential heart condition)</p>
+					<div><a ui-sref="form.profile" class="button special" ng-click="proceedtosurvey('Patient')">Proceed to survey&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+				</div>				
+            </div>
+        </section>
+    </section>
+
     <!-- Banner --
         <section id="banner">
             <div class="inner">
@@ -137,7 +182,7 @@
 
 
     <!-- Two -->
-    <section id="two" class="wrapper alt style2">
+   <!--  <section id="two" class="wrapper alt style2">
         <section class="spotlight">
             <div class="image">
                 <h2>WHAT WE DO</h2>
@@ -151,7 +196,7 @@
     </section>
 
     <!-- Three -->
-    <section id="three" class="wrapper style3 special">
+    <!--<section id="three" class="wrapper style3 special">
         <div class="inner">
 
             <ul class="features"><h2>Please Select Who you Are?</h2>
@@ -173,7 +218,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- Footer -->

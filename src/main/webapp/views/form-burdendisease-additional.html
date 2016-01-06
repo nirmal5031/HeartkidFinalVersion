@@ -158,14 +158,13 @@
 
     <div class="btn-group surveybutton" style="">
         <button  style="" ui-sref="form.burden-1" class="btnnext btn-primary">Previous</button>
-        <button  style="" ui-sref="form.burden-2" class="btnnext btn-default" ng-click="">Next</button>
+        <button  style="" ui-sref="form.burden-2" class="btnnext btn-default" ng-disabled="userForm.$invalid" ng-click="saveouthospitalform()">Next</button>
     </div>
     <br><br>
         </div>
 
 <script>
     $(document).ready(function(){
-        alert("initialie tool tipo");
         $('[data-toggle="tooltip"]').tooltip();
     });
     </script>

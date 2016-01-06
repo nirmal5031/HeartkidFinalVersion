@@ -16,7 +16,8 @@ angular.module('formApp', ['ui.router'])
             })
             .state('home', {
                 url: '/form/research',
-                templateUrl: 'views/home.html'
+                templateUrl: 'views/home.html',
+                controller: 'homepagecontroller'
             })
 
             .state('form.profile', {
@@ -161,11 +162,10 @@ angular.module('formApp', ['ui.router'])
     })
 
     .controller('homepagecontroller', function($scope,$http,dataService,$state,$location) {
-
         function isNumber(n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
         }
-
+sessionStorage.clear();
         $scope.$watch('$viewContentLoaded', function(){
 
             $http({
@@ -190,8 +190,8 @@ angular.module('formApp', ['ui.router'])
                 })
         });
 
-        $scope.proceedtosurvey = function() {
-
+        $scope.proceedtosurvey = function(usertype) {
+            sessionStorage.setItem('usertype',usertype);
             $http({
                 url: 'heartkid/referencegen',
                 method: "GET"
@@ -200,22 +200,30 @@ angular.module('formApp', ['ui.router'])
                 .then(function(response) {
                     var data = $.parseJSON(angular.toJson(response.data));
                     dataService.dataObj = data;
-                    $state.go('form.profile');
                 },
                 function(response) {
                     $state.go('form.generror');
 
                 })
         }
+
+
+
     })
 
     .controller('personalInfoContrler', ['$scope','$http', 'dataService','$state','$rootScope', function ($scope, $http, dataService,$state,$rootScope) {
 
+       var usertype= sessionStorage.getItem('usertype');
+        if(usertype=='Patient'){
+            $scope.showcarer = 'false';
+        }
+        else
+        {
+            $scope.showcarer = 'true';
+        }
+        $scope.formData.usertype =usertype;
+        $scope.formData.referencenumber = dataService.dataObj;
 
-
-      $scope.formData.referencenumber = dataService.dataObj;
-
-        $scope.showcarerdetails = 'false';
 
         var progress = setInterval(function () {
             var $bar = $('.bar');
@@ -352,23 +360,20 @@ angular.module('formApp', ['ui.router'])
         }
 
 
-        $scope.usertypesel = function()
-        {
-            var selectdusertyp = $scope.formData.usertype;
 
-            if(selectdusertyp =="Carer")
-            {
-
-                $scope.showcarerdetails = 'true';
-            }
-            else{
-                $scope.showcarerdetails = 'false';
-            }
-        }
     }])
 
     .controller('burdendiseaseController', function ($scope, $http,dataService,$state) {
-        var usertype = $scope.formData.usertype;
+        var usertype= sessionStorage.getItem('usertype');
+
+        if(usertype=='Patient'){
+            $scope.showcarer = 'false';
+        }
+        else
+        {
+            $scope.showcarer = 'true';
+        }
+        $scope.formData.usertype =usertype;
         var conditioncalldelectd = $scope.formData.conditioncalld;
         $scope.usernameval = $scope.formData.firstname+" "+$scope.formData.lastname;
         $scope.referencenumberval = $scope.formData.referencenumber;

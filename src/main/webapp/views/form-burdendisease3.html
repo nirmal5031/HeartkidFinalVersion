@@ -56,7 +56,7 @@
                 </table>
             </div>
 
-            <div class="headerpane">Do you know heartkids</div>
+            <div class="headerpane">Do you know heartkids ?</div>
 
             <div class="control"  >
                 <label class=" col-sm-2"  style="width: 100%;">Have you heard of HeartKids? <em>*</em></label>
@@ -86,7 +86,7 @@
             </div>
     <div class="btn-group surveybutton" style="">
         <button  style="" ui-sref="form.burden-2" class="btnnext btn-primary">Previous</button>
-        <button  style="" ui-sref="form.thankyou"  class="btnnext btn-default" ng-click="">Submit</button>
+        <button  style="" ui-sref="form.thankyou"  class="btnnext btn-default" ng-disabled="userForm.$invalid" ng-click="savesurveyregistration()">Submit</button>
     </div>
     <br><br>
         </div>
