@@ -56,8 +56,8 @@
 
 <body class="landing" ng-app="formApp">
 <header class="cd-header">
-		<div id="cd-logo"><a href="#0"><img src="images/heart_kidslogo1.png" alt="Logo" data-pin-nopin="true"></a></div>
-
+		<div id="cd-logo"><a href="http://www.heartkids.org.au"><img src="images/heart_kidslogo1.png" alt="Logo" data-pin-nopin="true"></a></div>
+    <h4 style="text-align: right; margin-right: 0.9%; color: orange; font-weight: bold">Survey Participants: <strong>00{{regcount}}</strong></h4>
 		<nav class="cd-primary-nav">
 			<ul>
 				<li><a href="http://www.heartkids.org.au">Home</a></li>
@@ -75,24 +75,24 @@
                 <div class="cd-full-width">
                     <p>Most people now</p>
                     <h2>Survive Surgery</h2>
-                    <p>live many years</p>
+                    <p>live for many years</p>
                     <a href="#survey-block" class="cd-btn secondary">Learn More</a>
                 </div> <!-- .cd-full-width -->
             </li>
 
             <li>
                 <div class="cd-full-width">
-                    <p>Surgical techniques have allowed</p>
-                    <h2>for improved survival</h2>
+                    <p>Surgical techniques have allowed for</p>
+                    <h2>improved survival</h2>
                     <p>for most CHD patients</p>
                 </div> <!-- .cd-full-width -->
             </li>
 
             <li>
                 <div class="cd-full-width">
-                    <p>HELP US HELP YOU</p>
-                    <h2> WE WANT TO FIND YOU</h2>
-                    <p>MAKE YOUR VOICE COUNT</p>
+                    <p>We want to find you</p>
+                    <h2>Help Us help you</h2>
+                    <p>Make your voice count</p>
 
                 </div> <!-- .cd-full-width -->
 
@@ -135,11 +135,11 @@
         <section class="spotlight">
             <div class="image">
                 <h2>WHAT WE DO</h2>
-                <p>Australian CHD Research Consortium brings you "Register to be Registered" For the first time ever there are now more adults than Children living with a congenital heart condition. The fantastic success in surgery of the last two decades give us hope and we need to understand more about you now more than ever before! <a href="#" style="color:#0072bb; text-decoration:none;">More...</a></p>
+                <p>Australian CHD Research Consortium brings you "Register to be Registered" For the first time ever there are now more adults than Children living with a congenital heart condition. The fantastic success in surgery of the last two decades give us hope and we need to understand more about you now more than ever before! </p>
             </div>
             <div class="image">
                 <h2>HOW YOU CAN HELP</h2>
-                <p>Improved surgical techniques have allowed fantastic survival and Quality of Life for most CHD patients. Therefore, we are now finding MORE ADULTS living with CHD that ever in history. The NEEDS OF ALL PATIETNTS with CHD are important and this program is designed to understand your needs better. <a href="#" style="color:#0072bb; text-decoration:none;">More...</a></p>
+                <p>Improved surgical techniques have allowed fantastic survival and Quality of Life for most CHD patients. Therefore, we are now finding MORE ADULTS living with CHD that ever in history. The NEEDS OF ALL PATIETNTS with CHD are important and this program is designed to understand your needs better.</p>
             </div>
         </section>
     </section>
@@ -150,89 +150,28 @@
         <section class="spotlight">
             <div class="image">
                 <h2>CARER</h2>
-				<div class="imageContainer"><img src="images/Carer.png" style='width:60%;'></div>
+				<div class="imageContainer" ui-sref="form.profile" class="button special" ng-click="proceedtosurvey('Carer')"><img src="images/Carer.png" style='width:50%;'></div>
 				<div class="textContainer">
-					<p>Are you Carer?<br>(An adult who cares a child or adult with a congential condition)</p>
+					<p>Are you Carer?</p><p>(An adult who cares a child or adult with a congential condition)</p>
 					<div><a ui-sref="form.profile" class="button special" ng-click="proceedtosurvey('Carer')">Proceed to survey&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
-				</div>					
+				</div>
             </div>
 			<div class="image">
                 <h2>PATIENT</h2>
-				<div class="imageContainer"><img src="images/Patient.png" style='width:60%;'></div>
+				<div class="imageContainer" ui-sref="form.profile" ng-click="proceedtosurvey('Patient')"><img src="images/Patient.png" style='width:50%;'></div>
 				<div class="textContainer">
-					<p>Are you a HeartKid?<br>(An child or adult with a congential heart condition)</p>
+					<p>Are you a HeartKid?</p><p>(An child or adult with a congential heart condition)</p>
 					<div><a ui-sref="form.profile" class="button special" ng-click="proceedtosurvey('Patient')">Proceed to survey&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
 				</div>				
             </div>
         </section>
     </section>
 
-    <!-- Banner --
-        <section id="banner">
-            <div class="inner">
-            <p>Most people now</p>
-            <h2>SURVIVE SURGERY</h2>
-              <p>for many years</p>
-                <!--<ul class="actions">
-                    <li><a href="#" class="button special">Activate</a></li>
-                </ul>
-            </div>
-        </section>
-
-
-
-    <!-- Two -->
-   <!--  <section id="two" class="wrapper alt style2">
-        <section class="spotlight">
-            <div class="image">
-                <h2>WHAT WE DO</h2>
-                <p>Australian CHD Research Consortium brings you "Register to be Registered" For the first time ever there are now more adults than Children living with a congenital heart condition. The fantastic success in surgery of the last two decades give us hope and we need to understand more about you now more than ever before! <a href="#" style="color:#0072bb; text-decoration:none;">More...</a></p>
-            </div>
-            <div class="content">
-                <h2>HOW YOU CAN HELP</h2>
-                <p>Improved surgical techniques have allowed fantastic survival and Quality of Life for most CHD patients. Therefore, we are now finding MORE ADULTS living with CHD that ever in history. The NEEDS OF ALL PATIETNTS with CHD are important and this program is designed to understand your needs better. <a href="#" style="color:#0072bb; text-decoration:none;">More...</a></p>
-            </div>
-        </section>
-    </section>
-
-    <!-- Three -->
-    <!--<section id="three" class="wrapper style3 special">
-        <div class="inner">
-
-            <ul class="features"><h2>Please Select Who you Are?</h2>
-
-                <li class="">
-                    <h3>PATIENT</h3>
-                    <div class="survey"><img class="fit" src="images/Patient.png"></div>
-                    <div style="width:65%; float:left; padding-left:5%; text-align:left; margin-bottom:5em;">Are you a HeartKid?<br>
-                        (An child or adult with a congential heart condition)</div>
-
-                    <a ui-sref="form.profile" class="button special">Proceed to survey&nbsp;&nbsp;></a>
-                </li>
-                <li class="">
-                    <h3>CARER</h3>
-                    <div class="survey"><img class="fit" src="images/Carer.png"></div>
-                    <div style="width:65%; float:left; padding-left:5%; text-align:left; margin-bottom:5em;">Are you Carer?<br>
-                        (An adult who cares a child or adult with a congential condition)</div>
-                    <a ui-sref="form.treatment" class="button special">Proceed to survey&nbsp;&nbsp;></a>
-                </li>
-            </ul>
-        </div>
-    </section> -->
-
-
     <!-- Footer -->
     <div ng-include="'footer.html'"></div>
 </div>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
 
-<!-- Scripts -->
-<!--<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<!--<script src="assets/js/main.js"></script>-->
 
 </body>
 </html>

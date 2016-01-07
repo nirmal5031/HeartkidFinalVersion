@@ -247,6 +247,7 @@ Single slide style
   z-index: 1;
   left: 0;
   top: 0;
+  font-family: ProximaNova-Regular;
   /* this padding is used to align the text */
   padding-top: 100px;
   text-align: center;

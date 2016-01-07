@@ -292,8 +292,8 @@ header p {
 }
 
 .mobile-footer{
-	float:left !important;	
-	display:none;
+    float:left !important;
+    display:none;
 }
 /*
 	Spectral by HTML5 UP
@@ -310,7 +310,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-	font-family: ProximaNova-Light;
+    font-family: ProximaNova-Light;
     text-transform:none
 
 }
@@ -1721,6 +1721,20 @@ body, input, select, textarea {
     line-height: 1.30em;
 }
 
+
+
+option{padding: 15px 0; background: none;}
+
+
+
+
+select>option:hover
+{
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
 @media screen and (max-width: 1680px) {
 
     body, input, select, textarea {
@@ -1769,7 +1783,7 @@ em, i {
 }
 
 p {
-    margin: 0 0 2em 0;
+    margin: 0 0 0 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1985,7 +1999,7 @@ input[type="email"],
 select,
 textarea {
     -moz-appearance: none;
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
     -ms-appearance: none;
     appearance: none;
     background: rgba(144, 144, 144, 0.25);
@@ -2124,7 +2138,7 @@ input[type="radio"]:checked + label:before {
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-   /* box-shadow: 0 0 0 2px #21b2a6;*/
+    /* box-shadow: 0 0 0 2px #21b2a6;*/
 }
 
 input[type="checkbox"] + label:before {
@@ -2561,6 +2575,8 @@ button,
     text-overflow: ellipsis;
     width: 33%;
     margin-right: 2%;
+    font-family: ProximaNova-Semibold;
+    font-size: 16px;
 
 }
 
@@ -2625,7 +2641,7 @@ button.special,
     border: 1px solid #0072bb;
     font-size:14px;
     width: 100%;
-	padding:10px;
+    padding:10px;
 
 }
 
@@ -2695,7 +2711,7 @@ button:disabled,
     margin:0;
 }
 .features h2{
-	font-size: 1.5em;
+    font-size: 1.5em;
     color: #333333;
     font-weight: bold;
     line-height: 1em;
@@ -2753,13 +2769,13 @@ button:disabled,
     text-align: right;}
 
 .left-footer-container{
-	padding-left:5%;
-   float:left;
+    padding-left:5%;
+    float:left;
 }
 .right-footer-container{
-	padding-right:5%;
-   float:right;
-   text-align:right;
+    padding-right:5%;
+    float:right;
+    text-align:right;
 }
 .survey{
     /*background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../../images/Patient.png");
@@ -2897,10 +2913,10 @@ button:disabled,
 }
 
 .spotlight ul{
-	margin-top:5%;
-   list-style:none;
-   font-size:1.22em;
-   width:96%;
+    margin-top:5%;
+    list-style:none;
+    font-size:1.22em;
+    width:96%;
 }
 
 .spotlight .image {
@@ -2972,35 +2988,35 @@ button:disabled,
 }
 
 .sectionThree{
-	background-color: #f4f3f3;
-	padding-top:2em;
-	
+    background-color: #f4f3f3;
+    padding-top:2em;
+
 }
 .sectionThree .spotlight{
-	margin-top:0px !important;
+    margin-top:0px !important;
 }
 .sectionThree .features h2{
-	margin:0;
+    margin:0;
 }
 .sectionThree  .spotlight{
-	padding-bottom:3em;
+    padding-bottom:3em;
 }
 .sectionThree .image{
-	border:1px solid #e3e2e2;border-radius:0;margin-top:15px;
+    border:1px solid #e3e2e2;border-radius:0;margin-top:15px;
 }
 
 .sectionThree h2{
-	margin:5% 0 5% 37%;	
+    margin:5% 0 5% 37%;
 }
 .imageContainer{
-width:35%;float:left;	
-	
+    width:35%;float:left;
+
 }
 .textContainer{
-	width:65%;float:left;padding:0% 5% 5% 2%; 
+    width:65%;float:left;padding:0% 5% 5% 2%;
 }
 .textContainer p{
-	font-family: ProximaNova-Light;text-align:none;font-size:0.9em;
+    font-family: ProximaNova-Light;text-align:none;font-size:0.9em;
 }
 @media screen and (max-width: 1200px) {
 
@@ -3067,7 +3083,7 @@ width:35%;float:left;
 
 .wrapper > .inner {
     width: 65em;
-	padding:5em;
+    padding:5em;
     margin: 0 auto;
 }
 header .inner{margin-left:5em;
@@ -4423,18 +4439,18 @@ body.is-mobile #main > header {
 @media screen and (max-width: 980px) {
 
     #footer {
-       padding:15px !important;
+        padding:15px !important;
     }
-	.features_footer{
-		padding:0px !important;
-		margin:0px !important;
- 	}
-	.mobile-footer{
-		display:block !important;
-	}
-	.right-footer-container{
-		display:none !important;
-	}
+    .features_footer{
+        padding:0px !important;
+        margin:0px !important;
+    }
+    .mobile-footer{
+        display:block !important;
+    }
+    .right-footer-container{
+        display:none !important;
+    }
     .panel-title span
     {
         font-size: 17px;
@@ -4502,7 +4518,7 @@ body.is-mobile #main > header {
     #footer {
         padding: 3em 2em 1em 2em ;
     }
-	
+
     .panel-title span
     {
         font-size: 17px;
@@ -4621,3 +4637,8 @@ body.is-mobile.landing #footer {
 }
 
 
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year ,.ui-datepicker input.ui-datepicker-month, .ui-datepicker input.ui-datepicker-year
+
+{
+
+}

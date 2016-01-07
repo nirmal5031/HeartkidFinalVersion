@@ -6,7 +6,7 @@
                     <div class="control" >
                         <label class=" col-sm-2">Do you have a two parent family model?</label>
 
-                        <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.familymodel" name="familymodel" id="radio61" class="" value="yes" required/>  <label for="radio61" onclick>Yes</label></td><td><input type="radio" ng-model="formData.familymodel" name="familymodel" id="radio71" class=""  value="no" required/><label for="radio71" class="">No</label></td></tr></table>
+                        <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.familymodel" name="familymodel" id="radio61" class="" value="yes" />  <label for="radio61" onclick>Yes</label></td><td><input type="radio" ng-model="formData.familymodel" name="familymodel" id="radio71" class=""  value="no" /><label for="radio71" class="">No</label></td></tr></table>
 
                     </div>
     <div class="control" >
@@ -15,7 +15,7 @@
              <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
 
          </select>-->
-        <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.emotimpct" name="emotimpct" id="emotimpct" class="" value="yes" required/>  <label for="emotimpct" onclick>Yes</label></td><td><input type="radio" ng-model="formData.emotimpct" name="emotimpct" id="emotimpctNO" class=""  value="no" required/><label for="emotimpctNO" class="">No</label></td></tr></table>
+        <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.emotimpct" name="emotimpct" id="emotimpct" class="" value="yes" />  <label for="emotimpct" onclick>Yes</label></td><td><input type="radio" ng-model="formData.emotimpct" name="emotimpct" id="emotimpctNO" class=""  value="no" /><label for="emotimpctNO" class="">No</label></td></tr></table>
 
     </div>
     <div class="control" >
@@ -24,7 +24,7 @@
              <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
 
          </select>-->
-     <!--   <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.relationimpact" name="relationimpact" id="relationimpact" class="" value="yes" required/>  <label for="relationimpact" onclick>Yes</label></td><td><input type="radio" ng-model="formData.relationimpact" name="relationimpact" id="relationimpactNO" class=""  value="no" required/><label for="relationimpactNO" class="">No</label></td></tr></table>
+     <!--   <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.relationimpact" name="relationimpact" id="relationimpact" class="" value="yes" />  <label for="relationimpact" onclick>Yes</label></td><td><input type="radio" ng-model="formData.relationimpact" name="relationimpact" id="relationimpactNO" class=""  value="no" /><label for="relationimpactNO" class="">No</label></td></tr></table>
 -->
 
         <table class="table bs-examplenode5">
@@ -112,7 +112,7 @@
                 <td style="" name="frstsurgeryexp" class="col-md-1 barstylenode5 {{myClass}}" ng-repeat="node in nodes1to5"
                     ng-click="frstsurgerysel(node.id)"
                     ng-model="formData.frstsurgerysel" ng-class="getClassfrstsurgerysel(node.id)"   ng-mouseenter="myClass='redclass'"
-                    ng-mouseleave="myClass = ''" required>
+                    ng-mouseleave="myClass = ''" >
                     {{node.rate}}
                 </td>
             </tr>
@@ -220,7 +220,7 @@
             <option value="">&#45;&#45;Select&#45;&#45;</option> &lt;!&ndash; not selected / blank option &ndash;&gt;
 
         </select>-->
-        <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.heartkidsupport" name="heartkidsupport" id="rc1" class="" value="yes" required/>  <label for="rc1" onclick>Yes</label></td><td><input type="radio" ng-model="formData.heartkidsupport" name="heartkidsupport" id="rc2" class=""  value="no" required/><label for="rc2" class="">No</label></td></tr></table>
+        <table class="radio-btn"><tr><td style=""><input type="radio" ng-model="formData.heartkidsupport" name="heartkidsupport" id="rc1" class="" value="yes" />  <label for="rc1" onclick>Yes</label></td><td><input type="radio" ng-model="formData.heartkidsupport" name="heartkidsupport" id="rc2" class=""  value="no" /><label for="rc2" class="">No</label></td></tr></table>
 
 
     </div>
@@ -246,10 +246,10 @@
     </div>-->
 
     <table class="radio-btn" style="width: 100%;">
-        <tr><td><input type="radio" ng-model="formData.pstcologist" name="pstcologist" id="psy" class=""  value="no" required/><label for="psy" class="">Psychologist</label></td></tr>
-        <tr><td style=""><input type="radio" ng-model="formData.socworker" name="socworker" id="soc" class="" value="yes" required/>  <label for="soc" onclick>Social Worker</label></td></tr>
-        <tr><td style=""><input type="radio" ng-model="formData.familysuprt" name="familysuprt" id="fam" class="" value="yes" required/>  <label for="fam" onclick>Family support service</label></td></tr>
-        <tr><td><input type="radio" ng-model="formData.dedicatednurse" name="dedicatednurse" id="dedchd" class=""  value="no" required/><label for="dedchd" class="">A dedicated CHD nurse post discharge</label></td></tr>
+        <tr><td><input type="radio" ng-model="formData.pstcologist" name="pstcologist" id="psy" class=""  value="no" /><label for="psy" class="">Psychologist</label></td></tr>
+        <tr><td style=""><input type="radio" ng-model="formData.socworker" name="socworker" id="soc" class="" value="yes" />  <label for="soc" onclick>Social Worker</label></td></tr>
+        <tr><td style=""><input type="radio" ng-model="formData.familysuprt" name="familysuprt" id="fam" class="" value="yes" />  <label for="fam" onclick>Family support service</label></td></tr>
+        <tr><td><input type="radio" ng-model="formData.dedicatednurse" name="dedicatednurse" id="dedchd" class=""  value="no" /><label for="dedchd" class="">A dedicated CHD nurse post discharge</label></td></tr>
     </table>
 
     <div class="control"  >
@@ -261,7 +261,7 @@
 
         </select>-->
 
-        <table class="radio-btn"><tr><td style=""><input type="radio" ng-change="dedicatedCHDnurse()" ng-model="formData.dedicatedCHDnurse" name="dedicatedCHDnurse" id="radio72" class="" value="yes" required/>  <label for="radio72" onclick>Yes</label></td><td><input type="radio" ng-model="formData.dedicatedCHDnurse" name="dedicatedCHDnurse" id="radio82" class=""  value="no" required/><label for="radio82" class="">No</label></td></tr></table>
+        <table class="radio-btn"><tr><td style=""><input type="radio" ng-change="dedicatedCHDnurse()" ng-model="formData.dedicatedCHDnurse" name="dedicatedCHDnurse" id="radio72" class="" value="yes" />  <label for="radio72" onclick>Yes</label></td><td><input type="radio" ng-model="formData.dedicatedCHDnurse" name="dedicatedCHDnurse" id="radio82" class=""  value="no" /><label for="radio82" class="">No</label></td></tr></table>
 
     </div>
 

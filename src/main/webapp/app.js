@@ -85,37 +85,77 @@ angular.module('formApp', ['ui.router'])
             if($rootScope.currentState =="form.profile")
             {
                 $scope.profile='true';
-                $scope.treatment='false';
+                $scope.treatment='';
+                $scope.burden1='';
+                $scope.burden2='';
+                $scope.burden3='';
+                $scope.burden4='';
+                $scope.thankyou='';
             }
             if($rootScope.currentState =="form.treatment")
             {
-                $scope.profile='false';
+
+                $scope.profile='true';
                 $scope.treatment='true';
+                $scope.burden1='';
+                $scope.burden2='';
+                $scope.burden3='';
+                $scope.burden4='';
+                $scope.thankyou='';
             }
             if($rootScope.currentState =="form.burden-1")
             {
-                $scope.treatment='false';
+
+                $scope.treatment='true';
                 $scope.burden1='true';
+                $scope.profile='true';
+                $scope.burden2='';
+                $scope.burden3='';
+                $scope.burden4='';
+                $scope.thankyou='';
             }
             if($rootScope.currentState =="form.burden-add")
             {
-                $scope.burden1='false';
+                $scope.burden1='true';
                 $scope.burden2='true';
+                $scope.profile='true';
+                $scope.treatment='true';
+                $scope.burden3='';
+                $scope.burden4='';
+                $scope.thankyou='';
+
             }
             if($rootScope.currentState =="form.burden-2")
             {
-                $scope.burden2='false';
+                $scope.burden2='true';
                 $scope.burden3='true';
+                $scope.burden1='true';
+                $scope.profile='true';
+                $scope.treatment='true';
+                $scope.burden4='';
+                $scope.thankyou='';
+
             }
             if($rootScope.currentState =="form.burden-3")
             {
                 $scope.burden3='true';
-                $scope.burden4='false';
+                $scope.burden4='true';
+                $scope.burden1='true';
+                $scope.profile='true';
+                $scope.treatment='true';
+                $scope.burden2='true';
+                $scope.thankyou='';
             }
             if($rootScope.currentState =="form.thankyou")
             {
-                $scope.burden4='false';
+                $scope.burden3='true';
+                $scope.burden4='true';
+                $scope.burden1='true';
+                $scope.profile='true';
+                $scope.treatment='true';
+                $scope.burden2='true';
                 $scope.thankyou='true';
+
             }
 
 
